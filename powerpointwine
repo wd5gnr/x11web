@@ -1,0 +1,2 @@
+#!/bin/bash
+exec /usr/bin/q4wine-cli  -p "Office2007" -i "POWERPNT"

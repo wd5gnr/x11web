@@ -1,0 +1,5 @@
+#!/bin/bash
+APP=falstad.com/circuit/circuitjs.html
+ICON=-
+TITLE="https://falstad.com/circuit/circuitjs.html"
+exec weblaunch "$APP" "$TITLE" "$ICON" "Falstad Circuit Simulator"

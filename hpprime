@@ -1,0 +1,2 @@
+#!/bin/bash
+singleexec "HP Prime" q4wine-cli -p HPPrime -b /home/alw/wine-envs/HPPrime/drive_c/Program\ Files\ \(x86\)/HP/HP\ Prime\ Virtual\ Calculator/HPPrime.exe

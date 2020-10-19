@@ -1,0 +1,5 @@
+#!/bin/bash
+APP=messages.google.com
+ICON=-
+TITLE="Messages for web"
+exec weblaunch "$APP" "$TITLE" "$ICON"

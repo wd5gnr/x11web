@@ -1,0 +1,77 @@
+
+# Note some things replace their icon anyway so we only need to give it a unique class name, so use - instead of an icon name if you don't want to waste time puttingin a placeholder
+
+
+#BROWSER="google-chrome"
+BROWSER="vivaldi"
+
+
+
+# Note: you can find the classname and class from xprop. For Google Chrome it is Classname: google-chrome and Class: Google-Chrome
+# However, we can't really do anything with this anyway
+#BROWSER_CLASS=${BROWSER_CLASS-Vivaldi-Snapshot}
+#BROWSER_CLASSNAME=${BROWSER_CLASSNAME-vivaldi-snapshot}
+# Another way would be wmctrl -l and pick up that way, but it is different, also
+
+
+if [ $# -lt 3 ]
+then
+ echo Usage: weblaunch [-1] app title icon [new_title]
+ echo or: weblaunch [-1] app title - [new_title]
+ exit 1
+fi 
+
+if  which "$BROWSER" >/dev/null
+then
+   true
+else   
+   echo Can\'t find browser $BROWSER
+   exit 2
+fi
+
+
+# TODO: if first argument is -1 (or something) check for class exists and activate only
+if [ "$1" == -1 ]
+then
+   shift
+   cname="${4-1}"
+   if xdotool search --classname "$cname" windowactivate >/dev/null
+   then
+     echo Activated
+     exit 0
+   fi
+fi
+
+"$BROWSER" "--app=https://$1" &
+
+
+if [ -f "$3" -o "$3" == '-' ]
+then
+  for i in {1..50}  # try 25 times .25 seconds 
+  do
+#    tid="$( xwininfo -root -children -all | grep -iE "$2" | awk ' { print $1; exit; }' )"
+    tid=$( xdotool search --limit 1 --name "$2")
+    [ ! -z "$tid" ] && break   # if tid found, quit
+    echo Sleeping...
+    sleep 0.25
+  done
+  if [ ! -z "$tid" ] 
+  then 
+    dtid="$( printf "%d" $tid )"
+# set icon if necessary
+    if [ "$3" != '-' ]
+    then xseticon -id "${tid}" "$3"
+    fi
+# not clear if you need to unmap/map but seems like you don't
+    xdotool windowactivate --sync $dtid  getactivewindow set_window --classname "$1" set_window --class "$1" # windowunmap --sync windowmap
+    if [ ! -z "$4" ]
+    then
+      xdotool windowactivate --sync $dtid getactivewindow set_window --name "$4"
+    fi
+  else
+    echo Timeout
+  fi
+fi  
+
+
+# google, ms

@@ -1,0 +1,5 @@
+#!/bin/bash
+APP=read.amazon.com
+ICON=-
+TITLE="Kindle Cloud Reader"
+exec weblaunch "$APP" "$TITLE" "$ICON"

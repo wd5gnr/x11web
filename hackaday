@@ -1,0 +1,5 @@
+#!/bin/bash
+APP=hackaday.com/wp-admin
+ICON=-
+TITLE="Dashboard ‹ Hackaday"
+exec weblaunch "$APP" "$TITLE" "$ICON"
