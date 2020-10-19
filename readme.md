@@ -20,16 +20,18 @@ What's included here?
 Example Script
 ==
 Here's how to launch YouTube Music
+`
    #!/bin/bash
    APP=music.youtube.com
    ICON=-
    TITLE="YouTube Music"
    exec weblaunch -1 "$APP" "$TITLE" "$ICON"
-
+`
 Honestly, you could wrap it all on two lines:
+`
    #!/bin/bash
    exec weblaunch -1 music.youtube.com "YouTube Music" -
-   
+`   
 Or, you could create an alias. Go wild.
 
 Command Line Arguments
