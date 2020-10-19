@@ -1,5 +1,0 @@
-#!/bin/bash
-APP=youtube.com
-ICON=-
-TITLE="YouTube"
-exec weblaunch "$APP" "$TITLE" "$ICON"

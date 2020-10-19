@@ -1,5 +1,0 @@
-#!/bin/bash
-APP=medium.com
-ICON=-
-TITLE="| Medium"
-exec weblaunch "$APP" "$TITLE" "$ICON"

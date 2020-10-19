@@ -1,5 +1,0 @@
-#!/bin/bash
-APP=docs.google.com/drawings
-ICON=-
-TITLE="Google Drawings"
-exec weblaunch "$APP" "$TITLE" "$ICON"

@@ -1,9 +1,0 @@
-#!/bin/bash
-APP=mail.google.com/mail/u/?authuser=al.williams@awce.com
-ICON=-
-TITLE="Inbox.*AWC"
-exec weblaunch "$APP" "$TITLE" "$ICON"
-
-
-
-

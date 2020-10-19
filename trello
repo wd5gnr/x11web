@@ -1,5 +1,0 @@
-#!/bin/bash
-APP=trello.com
-ICON=-
-TITLE="Trello"
-exec weblaunch "$APP" "$TITLE" "$ICON"

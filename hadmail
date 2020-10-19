@@ -1,9 +1,0 @@
-#!/bin/bash
-APP=mail.google.com/mail/u/?authuser=alwilliams@hackaday.com
-ICON=-
-TITLE="Inbox.*Hackaday"
-exec weblaunch "$APP" "$TITLE" "$ICON"
-
-
-
-

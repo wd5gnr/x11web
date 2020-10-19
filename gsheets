@@ -1,5 +1,0 @@
-#!/bin/bash
-APP=sheets.google.com
-ICON=-
-TITLE="Google Sheets"
-exec weblaunch "$APP" "$TITLE" "$ICON"

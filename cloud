@@ -1,5 +1,0 @@
-#!/bin/bash
-APP=cloud.awce.com
-ICON=-
-TITLE=cloud.awce.com_/
-exec weblaunch "$APP" "$TITLE" "$ICON"
