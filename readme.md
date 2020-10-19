@@ -37,7 +37,8 @@ Or, you could create an alias. Go wild.
 Command Line Arguments
 ==
 Here's how to run weblaunch
-   weblaunch [-1] app title icon [alt_title]
+
+   `weblaunch [-1] app title icon [alt_title]`
    
 If -1 is provided, the script will not create a second copy of the app, but will activate the first copy instead. If there is no first copy, this option has no effect and the app will launch.
 
