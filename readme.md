@@ -60,3 +60,8 @@ Special Cases
 * If you need to log into a web site, this may cause problems with the titles so you may have to accept that you have to log in first
 * Gmail will go to your primary account. If you are logged into a secondary account, you can use a URL like mail.google.com/mail/u/>authuser=myaddress@gmail.com
 * Titles need to be specific enough not to match other windows. For example, Inbox isn't a good title for gmail unless you only have one account open since they will all say Inbox.
+
+Other Notes
+==
+You can use Nativefier to convert a page to an Electron app. However, this is NOT your browser so you don't get saved passwords and extensions. So, for example, no Grammarly in Gmail or Docs, which is a big problem. Using this method,
+you are still in your browser so everything works the same. See https://github.com/jiahaog/nativefier.
