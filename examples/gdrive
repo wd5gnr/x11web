@@ -1,0 +1,5 @@
+#!/bin/bash
+APP=drive.google.com
+ICON=-
+TITLE="My Drive - Google"
+exec weblaunch "$APP" "$TITLE" "$ICON"

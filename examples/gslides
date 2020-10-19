@@ -1,0 +1,5 @@
+#!/bin/bash
+APP=slides.google.com
+ICON=-
+TITLE="Google Slides"
+exec weblaunch "$APP" "$TITLE" "$ICON"

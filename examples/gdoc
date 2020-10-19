@@ -1,0 +1,5 @@
+#!/bin/bash
+APP=docs.google.com
+ICON=-
+TITLE="Google Docs"
+exec weblaunch "$APP" "$TITLE" "$ICON"
