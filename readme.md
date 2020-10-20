@@ -63,6 +63,7 @@ Special Cases
 * If you need to log into a web site, this may cause problems with the titles so you may have to accept that you have to log in first
 * Gmail will go to your primary account. If you are logged into a secondary account, you can use a URL like mail.google.com/mail/u/>authuser=myaddress@gmail.com
 * Titles need to be specific enough not to match other windows. For example, Inbox isn't a good title for gmail unless you only have one account open since they will all say Inbox.
+* When not using the -1 option, you can have problems where the titles from previous windows match instead of the current window. Investigating some potential fixes for that.
 
 Other Notes
 ==
